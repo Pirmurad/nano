@@ -420,12 +420,39 @@ $('#mailsend').on('submit',function(e) {  //Don't foget to change the id form
             $(".child-menu").addClass('active');
         },
         function () {
-            // $(".child-menu").removeClass('active');
+            $(".header-bottom").removeClass('active');
         }
     );
+	// $( ".header-bottom" ).mouseleave(function() {
+	// 	$(".child-menu").removeClass('active');
+	// });
 
+
+	$(".mobile-container ul li a").hover(
+		function () {
+			var catid = $(this).data('id');
+			$.ajax({
+				url: "ajax/category.php",
+				method: "post",
+				data: { id: catid },
+				dataType: "json",
+				success: function( data ) {
+					$(".child-menu>.megamenu-2").html(data);
+				}
+			});
+			$(".child-menu").addClass('animated fadeInRight delay-4s');
+			$(".el span").css({"visibility":"hidden"});
+		},
+		function () {
+			// $(".child-menu").removeClass('active');
+		}
+	);
     $( ".header-bottom" ).mouseleave(function() {
-        $(".child-menu").removeClass('active');
+		$(".child-menu").removeClass('fadeInRight');
+		$(".child-menu").addClass('fadeOutRight');
+		$(".el span").css({"visibility":"visible"});
+
+
 	});
 
     $( "#search" ).autocomplete({

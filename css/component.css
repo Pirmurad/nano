@@ -186,21 +186,17 @@
 		transform: translate(-100%, -50%);
 	}
 
-}
 
-	.cbp-spmenu  {
-		position: fixed;
-		overflow-y: scroll;
 
+
+	.cbp-spmenu ul.bg-menu li:nth-child(odd)
+	{
+		background-color:#2d2e82;
 	}
-.cbp-spmenu ul li:nth-child(odd)
-{
-	background-color:#2d2e82;
-}
-.cbp-spmenu ul li:nth-child(even)
-{
-	background-color:#27348b;
-}
+	.cbp-spmenu ul.bg-menu li:nth-child(even)
+	{
+		background-color:#27348b;
+	}
 
 	.cbp-spmenu .menu-header {
 
@@ -330,6 +326,51 @@
 		-moz-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 	}
+
+	.child-menu {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		background-color: transparent !important;
+		opacity: 0;
+	}
+	.child-menu ul.megamenu-2 {
+		height: auto;
+		width: 85% !important;
+		position: absolute;
+		z-index: 9999999999;
+	}
+	.child-menu ul.megamenu-2>li {
+		width: 100% !important;
+		float: right !important;
+	}
+	.child-menu .box-shadow
+	{
+		box-shadow:none;
+	}
+	.child-menu ul.megamenu-2
+	{
+		background: #fff;
+		margin-left: 47px;
+	}
+	.cbp-spmenu-vertical ul.megamenu-2 a {
+
+		padding: 1em;
+		color: #000;
+	}
+
+
+
+
+
+}
+
+	.cbp-spmenu  {
+		position: fixed;
+		overflow-y: scroll;
+
+	}
+
 
 	/* Example media queries */
 	@media screen and (max-width: 55.1875em) {
