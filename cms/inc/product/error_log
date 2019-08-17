@@ -1,0 +1,244 @@
+[12-Dec-2018 05:02:42 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'eprice' at row 1 in /home/nanoelectronics/public_html/config/func.php:197
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(197): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/edit.php(59): update('`product`', '`category_id` =...', '`id` = ?', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 197
+[12-Dec-2018 05:02:57 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'eprice' at row 1 in /home/nanoelectronics/public_html/config/func.php:197
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(197): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/edit.php(59): update('`product`', '`category_id` =...', '`id` = ?', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 197
+[12-Dec-2018 06:58:06 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[12-Dec-2018 06:58:26 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[12-Dec-2018 06:58:36 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[12-Dec-2018 06:59:17 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[12-Dec-2018 06:59:25 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[15-Dec-2018 10:31:18 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[15-Dec-2018 10:31:27 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 02:10:59 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 02:11:22 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 02:58:19 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 03:17:29 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 03:34:08 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 03:57:50 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 04:12:12 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 04:22:37 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 04:47:46 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 04:59:48 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 05:15:12 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 05:28:59 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[18-Dec-2018 05:37:13 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[13-Mar-2019 17:30:56 Asia/Baku] PHP Warning:  Invalid argument supplied for foreach() in /home/nanoelectronics/public_html/cms/inc/product/add.php on line 79
+[13-Mar-2019 17:30:56 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[13-Mar-2019 17:56:54 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[13-Mar-2019 18:23:51 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[04-Apr-2019 14:41:08 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[04-Apr-2019 14:53:43 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[04-Apr-2019 15:09:42 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 19:47:27 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 20:18:15 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 20:41:42 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 20:52:08 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 22:06:59 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 22:31:24 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[20-Apr-2019 23:18:31 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[04-May-2019 17:23:43 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[04-May-2019 21:37:23 Asia/Baku] PHP Warning:  Invalid argument supplied for foreach() in /home/nanoelectronics/public_html/cms/inc/product/add.php on line 79
+[04-May-2019 21:37:23 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[09-May-2019 11:16:01 Asia/Baku] PHP Warning:  Invalid argument supplied for foreach() in /home/nanoelectronics/public_html/cms/inc/product/add.php on line 79
+[09-May-2019 11:16:01 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[09-May-2019 15:39:27 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173
+[15-Jun-2019 18:53:50 Asia/Baku] PHP Warning:  Invalid argument supplied for foreach() in /home/nanoelectronics/public_html/cms/inc/product/add.php on line 79
+[15-Jun-2019 18:53:50 Asia/Baku] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in /home/nanoelectronics/public_html/config/func.php:173
+Stack trace:
+#0 /home/nanoelectronics/public_html/config/func.php(173): PDOStatement->execute(Array)
+#1 /home/nanoelectronics/public_html/cms/inc/product/add.php(105): insert('`kredit_product...', '`kredit_id` = ?...', Array)
+#2 {main}
+  thrown in /home/nanoelectronics/public_html/config/func.php on line 173

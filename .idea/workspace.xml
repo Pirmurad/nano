@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c1bb5a8-355d-49ba-8b62-61101cdf84de" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/dist/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/matchedit-data.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/matchedit-data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/pages/html_start.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/pages/html_start.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="lishiq@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="lishiq@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="lishiq@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lishiq: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Blade" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1P8u3la7iWjJ1zjZM52g9sqNiAe" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../longway" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.php.frameworks" />
+    <property name="settings.editor.splitter.proportion" value="0.26708075" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\OSPanel\domains\localhost\lishiq\public\img" />
+      <recent name="E:\OSPanel\domains\localhost\lishiq\public\font" />
+      <recent name="E:\OSPanel\domains\localhost\lishiq\public\css" />
+      <recent name="E:\OSPanel\domains\localhost\lishiq\public\js" />
+      <recent name="E:\OSPanel\domains\localhost\lishiq\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\OSPanel\domains\localhost\nano\form" />
+      <recent name="E:\OSPanel\domains\localhost\nano\pages" />
+      <recent name="E:\OSPanel\domains\localhost\nano\ajax" />
+      <recent name="E:\OSPanel\domains\localhost\nano\cms\inc" />
+      <recent name="E:\OSPanel\domains\localhost\nano\cms\inc\type\param\value" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\TexnoBaku\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c1bb5a8-355d-49ba-8b62-61101cdf84de" name="Default" comment="" />
+      <created>1514043823112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514043823112</updated>
+      <workItem from="1514043825945" duration="8869000" />
+      <workItem from="1514102184226" duration="3167000" />
+      <workItem from="1514108942250" duration="2966000" />
+      <workItem from="1514145271211" duration="2215000" />
+      <workItem from="1514191776725" duration="9507000" />
+      <workItem from="1514223485778" duration="3692000" />
+      <workItem from="1514270777724" duration="2113000" />
+      <workItem from="1514384367170" duration="15835000" />
+      <workItem from="1514449337767" duration="5270000" />
+      <workItem from="1514482617333" duration="7465000" />
+      <workItem from="1514539433130" duration="3986000" />
+      <workItem from="1514624682510" duration="9944000" />
+      <workItem from="1514708948369" duration="9079000" />
+      <workItem from="1514732321136" duration="9554000" />
+      <workItem from="1514796135802" duration="5285000" />
+      <workItem from="1514836267091" duration="2328000" />
+      <workItem from="1514914356167" duration="8462000" />
+      <workItem from="1515047627779" duration="3348000" />
+      <workItem from="1515064548254" duration="2298000" />
+      <workItem from="1515084189872" duration="340000" />
+      <workItem from="1515131874961" duration="3720000" />
+      <workItem from="1515150003076" duration="6439000" />
+      <workItem from="1515264963146" duration="2938000" />
+      <workItem from="1515322671694" duration="456000" />
+      <workItem from="1515422203817" duration="1012000" />
+      <workItem from="1515438076066" duration="83000" />
+      <workItem from="1515481328978" duration="5581000" />
+      <workItem from="1515495592289" duration="3862000" />
+      <workItem from="1515527281655" duration="5841000" />
+      <workItem from="1515574489392" duration="12284000" />
+      <workItem from="1515602819262" duration="3072000" />
+      <workItem from="1515654723204" duration="4859000" />
+      <workItem from="1515772899734" duration="1008000" />
+      <workItem from="1515828851386" duration="6630000" />
+      <workItem from="1515942158530" duration="635000" />
+      <workItem from="1523021056703" duration="3472000" />
+      <workItem from="1523028548698" duration="2106000" />
+      <workItem from="1523033806954" duration="3678000" />
+      <workItem from="1523088141760" duration="3648000" />
+      <workItem from="1523177766391" duration="675000" />
+      <workItem from="1523263231821" duration="17279000" />
+      <workItem from="1523344583624" duration="3879000" />
+      <workItem from="1523369785057" duration="8024000" />
+      <workItem from="1523432001875" duration="55262000" />
+      <workItem from="1523721162300" duration="259000" />
+      <workItem from="1523729524359" duration="863000" />
+      <workItem from="1525114735301" duration="598000" />
+      <workItem from="1525153191756" duration="16054000" />
+      <workItem from="1525200682145" duration="4916000" />
+      <workItem from="1525237966897" duration="12036000" />
+      <workItem from="1525277998042" duration="10577000" />
+      <workItem from="1525323646500" duration="17223000" />
+      <workItem from="1525372610059" duration="4169000" />
+      <workItem from="1525411461009" duration="17461000" />
+      <workItem from="1525610084674" duration="5979000" />
+      <workItem from="1525670837072" duration="19358000" />
+      <workItem from="1525712296588" duration="2968000" />
+      <workItem from="1525718012367" duration="1722000" />
+      <workItem from="1525755731577" duration="6970000" />
+      <workItem from="1525774884042" duration="3061000" />
+      <workItem from="1525798386055" duration="618000" />
+      <workItem from="1525851599347" duration="9250000" />
+      <workItem from="1525879443777" duration="8434000" />
+      <workItem from="1525971304669" duration="9410000" />
+      <workItem from="1526115728445" duration="1198000" />
+      <workItem from="1526121411516" duration="11715000" />
+      <workItem from="1526228166742" duration="6035000" />
+      <workItem from="1526307933467" duration="3134000" />
+      <workItem from="1526405478298" duration="5668000" />
+      <workItem from="1526494643378" duration="6717000" />
+      <workItem from="1526576745166" duration="5696000" />
+      <workItem from="1526648761527" duration="6301000" />
+      <workItem from="1526664225115" duration="2609000" />
+      <workItem from="1526810038116" duration="18718000" />
+      <workItem from="1526916101155" duration="599000" />
+      <workItem from="1526929632733" duration="3357000" />
+      <workItem from="1526977698743" duration="1284000" />
+      <workItem from="1527067655183" duration="6336000" />
+      <workItem from="1527265456432" duration="599000" />
+      <workItem from="1527355644178" duration="1347000" />
+      <workItem from="1527490915390" duration="9886000" />
+      <workItem from="1527698681033" duration="624000" />
+      <workItem from="1527702619033" duration="3607000" />
+      <workItem from="1527761443785" duration="9376000" />
+      <workItem from="1527924301716" duration="14524000" />
+      <workItem from="1527941242835" duration="4622000" />
+      <workItem from="1527962039965" duration="3482000" />
+      <workItem from="1528013219114" duration="10063000" />
+      <workItem from="1528122735064" duration="5001000" />
+      <workItem from="1565267853704" duration="440000" />
+      <workItem from="1565331243304" duration="617000" />
+      <workItem from="1565344587266" duration="1661000" />
+      <workItem from="1565349182907" duration="5474000" />
+      <workItem from="1565373167982" duration="2197000" />
+      <workItem from="1565376011316" duration="555000" />
+      <workItem from="1565414642535" duration="6252000" />
+      <workItem from="1565422203921" duration="3405000" />
+      <workItem from="1565688547347" duration="980000" />
+      <workItem from="1565692582792" duration="327000" />
+      <workItem from="1565694472455" duration="140000" />
+      <workItem from="1565694642907" duration="5494000" />
+      <workItem from="1565701280400" duration="631000" />
+      <workItem from="1565702410828" duration="226000" />
+      <workItem from="1565766141999" duration="1276000" />
+      <workItem from="1565770068189" duration="8940000" />
+      <workItem from="1565781745574" duration="7021000" />
+      <workItem from="1565801620237" duration="6073000" />
+      <workItem from="1565808108539" duration="3241000" />
+      <workItem from="1565848845358" duration="10112000" />
+      <workItem from="1565894444702" duration="1941000" />
+      <workItem from="1565930883465" duration="8322000" />
+      <workItem from="1565981340319" duration="1021000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

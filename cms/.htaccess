@@ -1,0 +1,221 @@
+#Set Directory
+DirectoryIndex index.php
+
+#Prevent access to system files
+## Enable Mod Rewrite, this is only required once in each .htaccess file
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /cms
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+#brand
+RewriteRule ^brand/list/?$ inc/brand/list.php [NC,L]
+RewriteRule ^brand/edit/([0-9]+)/?$ inc/brand/edit.php?id=$1 [NC,L]
+RewriteRule ^brand/show/([0-9]+)/?$ inc/brand/show.php?id=$1 [NC,L]
+RewriteRule ^brand/delete/([0-9]+)/?$ inc/brand/delete.php?id=$1 [NC,L]
+RewriteRule ^brand/create/?$ inc/brand/add.php [NC,L]
+RewriteRule ^brand/list/up/([0-9]+)/([0-9]+)/?$ inc/brand/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^brand/list/down/([0-9]+)/([0-9]+)/?$ inc/brand/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^brand/list/([0-9]+)/?$ inc/brand/list.php?pagination=$1 [NC,L]
+
+#category
+RewriteRule ^category/list/?$ inc/category/list.php [NC,L]
+RewriteRule ^category/edit/([0-9]+)/?$ inc/category/edit.php?id=$1 [NC,L]
+RewriteRule ^category/show/([0-9]+)/?$ inc/category/show.php?id=$1 [NC,L]
+RewriteRule ^category/delete/([0-9]+)/?$ inc/category/delete.php?id=$1 [NC,L]
+RewriteRule ^category/create/?$ inc/category/add.php [NC,L]
+RewriteRule ^category/list/up/([0-9]+)/([0-9]+)/?$ inc/category/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^category/list/down/([0-9]+)/([0-9]+)/?$ inc/category/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^category/list/([0-9]+)/?$ inc/category/list.php?pagination=$1 [NC,L]
+
+#menyu
+RewriteRule ^menyu/list/?$ inc/menyu/list.php [NC,L]
+RewriteRule ^menyu/edit/([0-9]+)/?$ inc/menyu/edit.php?id=$1 [NC,L]
+RewriteRule ^menyu/show/([0-9]+)/?$ inc/menyu/show.php?id=$1 [NC,L]
+RewriteRule ^menyu/delete/([0-9]+)/?$ inc/menyu/delete.php?id=$1 [NC,L]
+RewriteRule ^menyu/create/?$ inc/menyu/add.php [NC,L]
+RewriteRule ^menyu/list/up/([0-9]+)/([0-9]+)/?$ inc/menyu/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^menyu/list/down/([0-9]+)/([0-9]+)/?$ inc/menyu/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^menyu/list/([0-9]+)/?$ inc/menyu/list.php?pagination=$1 [NC,L]
+
+#slider
+RewriteRule ^slider/list/?$ inc/slider/list.php [NC,L]
+RewriteRule ^slider/edit/([0-9]+)/?$ inc/slider/edit.php?id=$1 [NC,L]
+RewriteRule ^slider/delete/([0-9]+)/?$ inc/slider/delete.php?id=$1 [NC,L]
+RewriteRule ^slider/show/([0-9]+)/?$ inc/slider/show.php?id=$1 [NC,L]
+RewriteRule ^slider/create/?$ inc/slider/add.php [NC,L]
+RewriteRule ^slider/list/up/([0-9]+)/([0-9]+)/?$ inc/slider/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^slider/list/down/([0-9]+)/([0-9]+)/?$ inc/slider/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^slider/list/([0-9]+)/?$ inc/slider/list.php?pagination=$1 [NC,L]
+
+#banner
+RewriteRule ^banner/list/?$ inc/banner/list.php [NC,L]
+RewriteRule ^banner/edit/([0-9]+)/?$ inc/banner/edit.php?id=$1 [NC,L]
+RewriteRule ^banner/delete/([0-9]+)/?$ inc/banner/delete.php?id=$1 [NC,L]
+RewriteRule ^banner/show/([0-9]+)/?$ inc/banner/show.php?id=$1 [NC,L]
+RewriteRule ^banner/create/?$ inc/banner/add.php [NC,L]
+RewriteRule ^banner/list/up/([0-9]+)/([0-9]+)/?$ inc/banner/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^banner/list/down/([0-9]+)/([0-9]+)/?$ inc/banner/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^banner/list/([0-9]+)/?$ inc/banner/list.php?pagination=$1 [NC,L]
+
+#sponsor
+RewriteRule ^sponsor/list/?$ inc/sponsor/list.php [NC,L]
+RewriteRule ^sponsor/edit/([0-9]+)/?$ inc/sponsor/edit.php?id=$1 [NC,L]
+RewriteRule ^sponsor/delete/([0-9]+)/?$ inc/sponsor/delete.php?id=$1 [NC,L]
+RewriteRule ^sponsor/show/([0-9]+)/?$ inc/sponsor/show.php?id=$1 [NC,L]
+RewriteRule ^sponsor/create/?$ inc/sponsor/add.php [NC,L]
+RewriteRule ^sponsor/list/up/([0-9]+)/([0-9]+)/?$ inc/sponsor/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^sponsor/list/down/([0-9]+)/([0-9]+)/?$ inc/sponsor/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^sponsor/list/([0-9]+)/?$ inc/sponsor/list.php?pagination=$1 [NC,L]
+
+#param
+RewriteRule ^param/list/?$ inc/param/list.php [NC,L]
+RewriteRule ^param/edit/([0-9]+)/?$ inc/param/edit.php?id=$1 [NC,L]
+RewriteRule ^param/delete/([0-9]+)/?$ inc/param/delete.php?id=$1 [NC,L]
+RewriteRule ^param/show/([0-9]+)/?$ inc/param/show.php?id=$1 [NC,L]
+RewriteRule ^param/create/?$ inc/param/add.php [NC,L]
+RewriteRule ^param/list/up/([0-9]+)/([0-9]+)/?$ inc/param/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^param/list/down/([0-9]+)/([0-9]+)/?$ inc/param/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^param/list/([0-9]+)/?$ inc/param/list.php?pagination=$1 [NC,L]
+
+#param-gallery
+RewriteRule ^param/([0-9]+)/gallery/list/?$ inc/param/gallery/list.php?param_id=$1 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/edit/([0-9]+)/?$ inc/param/gallery/edit.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/delete/([0-9]+)/?$ inc/param/gallery/delete.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/show/([0-9]+)/?$ inc/param/gallery/show.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/create/?$ inc/param/gallery/add.php?param_id=$1 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/list/up/([0-9]+)/([0-9]+)/?$ inc/param/gallery/list.php?param_id=$1&directionrow=yuxari&id=$2&sira=$3 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/list/down/([0-9]+)/([0-9]+)/?$ inc/param/gallery/list.php?param_id=$1&directionrow=asagi&id=$2&sira=$3 [NC,L]
+RewriteRule ^param/([0-9]+)/gallery/list/([0-9]+)/?$ inc/param/gallery/list.php?param_id=$1&pagination=$2 [NC,L]
+
+
+#acceptparam
+RewriteRule ^acceptparam/list/?$ inc/acceptparam/list.php [NC,L]
+RewriteRule ^acceptparam/edit/([0-9]+)/?$ inc/acceptparam/edit.php?id=$1 [NC,L]
+RewriteRule ^acceptparam/doactive/([0-9]+)/?$ inc/acceptparam/doactive.php?id=$1 [NC,L]
+RewriteRule ^acceptparam/delete/([0-9]+)/?$ inc/acceptparam/delete.php?id=$1 [NC,L]
+RewriteRule ^acceptparam/show/([0-9]+)/?$ inc/acceptparam/show.php?id=$1 [NC,L]
+RewriteRule ^acceptparam/list/([0-9]+)/?$ inc/acceptparam/list.php?pagination=$1 [NC,L]
+
+#acceptparam-gallery
+RewriteRule ^acceptparam/([0-9]+)/gallery/list/?$ inc/acceptparam/gallery/list.php?param_id=$1 [NC,L]
+RewriteRule ^acceptparam/([0-9]+)/gallery/edit/([0-9]+)/?$ inc/acceptparam/gallery/edit.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^acceptparam/([0-9]+)/gallery/delete/([0-9]+)/?$ inc/acceptparam/gallery/delete.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^acceptparam/([0-9]+)/gallery/show/([0-9]+)/?$ inc/acceptparam/gallery/show.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^acceptparam/([0-9]+)/gallery/list/([0-9]+)/?$ inc/acceptparam/gallery/list.php?param_id=$1&pagination=$2 [NC,L]
+
+
+#editparam
+RewriteRule ^editparam/list/?$ inc/editparam/list.php [NC,L]
+RewriteRule ^editparam/edit/([0-9]+)/?$ inc/editparam/edit.php?id=$1 [NC,L]
+RewriteRule ^editparam/delete/([0-9]+)/?$ inc/editparam/delete.php?id=$1 [NC,L]
+RewriteRule ^editparam/show/([0-9]+)/?$ inc/editparam/show.php?id=$1 [NC,L]
+RewriteRule ^editparam/list/([0-9]+)/?$ inc/editparam/list.php?pagination=$1 [NC,L]
+#editparam-gallery
+RewriteRule ^editparam/([0-9]+)/gallery/list/?$ inc/editparam/gallery/list.php?param_id=$1 [NC,L]
+RewriteRule ^editparam/([0-9]+)/gallery/edit/([0-9]+)/?$ inc/editparam/gallery/edit.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^editparam/([0-9]+)/gallery/delete/([0-9]+)/?$ inc/editparam/gallery/delete.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^editparam/([0-9]+)/gallery/show/([0-9]+)/?$ inc/editparam/gallery/show.php?param_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^editparam/([0-9]+)/gallery/list/([0-9]+)/?$ inc/editparam/gallery/list.php?param_id=$1&pagination=$2 [NC,L]
+
+
+#type
+RewriteRule ^type/list/?$ inc/type/list.php [NC,L]
+RewriteRule ^type/edit/([0-9]+)/?$ inc/type/edit.php?id=$1 [NC,L]
+RewriteRule ^type/delete/([0-9]+)/?$ inc/type/delete.php?id=$1 [NC,L]
+RewriteRule ^type/show/([0-9]+)/?$ inc/type/show.php?id=$1 [NC,L]
+RewriteRule ^type/create/?$ inc/type/add.php [NC,L]
+RewriteRule ^type/list/up/([0-9]+)/([0-9]+)/?$ inc/type/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^type/list/down/([0-9]+)/([0-9]+)/?$ inc/type/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^type/list/([0-9]+)/?$ inc/type/list.php?pagination=$1 [NC,L]
+
+#type-param
+RewriteRule ^type/([0-9]+)/param/list/?$ inc/type/param/list.php?type_id=$1 [NC,L]
+RewriteRule ^type/([0-9]+)/param/edit/([0-9]+)/?$ inc/type/param/edit.php?type_id=$1&param_id=$2 [NC,L]
+RewriteRule ^type/([0-9]+)/param/delete/([0-9]+)/?$ inc/type/param/delete.php?type_id=$1&param_id=$2 [NC,L]
+RewriteRule ^type/([0-9]+)/param/show/([0-9]+)/?$ inc/type/param/show.php?type_id=$1&param_id=$2 [NC,L]
+RewriteRule ^type/([0-9]+)/param/create/?$ inc/type/param/add.php?type_id=$1 [NC,L]
+RewriteRule ^type/([0-9]+)/param/list/up/([0-9]+)/([0-9]+)/?$ inc/type/param/list.php?type_id=$1&directionrow=yuxari&id=$2&sira=$3 [NC,L]
+RewriteRule ^type/([0-9]+)/param/list/down/([0-9]+)/([0-9]+)/?$ inc/type/param/list.php?type_id=$1&directionrow=asagi&id=$2&sira=$3 [NC,L]
+RewriteRule ^type/([0-9]+)/param/list/([0-9]+)/?$ inc/type/param/list.php?type_id=$1&pagination=$2 [NC,L]
+
+#type-param-value
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/list/?$ inc/type/param/value/list.php?type_id=$1&param_id=$2 [NC,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/edit/([0-9]+)/?$ inc/type/param/value/edit.php?type_id=$1&param_id=$2&value_id=$3 [QSA,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/delete/([0-9]+)/?$ inc/type/param/value/delete.php?type_id=$1&param_id=$2&value_id=$3 [NC,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/show/([0-9]+)/?$ inc/type/param/value/show.php?type_id=$1&param_id=$2&value_id=$3 [NC,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/create/?$ inc/type/param/value/add.php?type_id=$1&param_id=$2 [NC,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/list/up/([0-9]+)/([0-9]+)/?$ inc/type/param/value/list.php?type_id=$1&param_id=$2&directionrow=yuxari&id=$3&sira=$4 [NC,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/list/down/([0-9]+)/([0-9]+)/?$ inc/type/param/value/list.php?type_id=$1&param_id=$2&directionrow=asagi&id=$3&sira=$4 [NC,L]
+RewriteRule ^type/([0-9]+)/param/([0-9]+)/value/list/([0-9]+)/?$ inc/type/param/value/list.php?type_id=$1&param_id=$2&pagination=$3 [NC,L]
+
+#kredit
+RewriteRule ^kredit/list/?$ inc/kredit/list.php [NC,L]
+RewriteRule ^kredit/edit/([0-9]+)/?$ inc/kredit/edit.php?id=$1 [NC,L]
+RewriteRule ^kredit/delete/([0-9]+)/?$ inc/kredit/delete.php?id=$1 [NC,L]
+RewriteRule ^kredit/show/([0-9]+)/?$ inc/kredit/show.php?id=$1 [NC,L]
+RewriteRule ^kredit/create/?$ inc/kredit/add.php [NC,L]
+RewriteRule ^kredit/list/up/([0-9]+)/([0-9]+)/?$ inc/kredit/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^kredit/list/down/([0-9]+)/([0-9]+)/?$ inc/kredit/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^kredit/list/([0-9]+)/?$ inc/kredit/list.php?pagination=$1 [NC,L]
+
+
+#news
+RewriteRule ^news/list/?$ inc/news/list.php [NC,L]
+RewriteRule ^news/edit/([0-9]+)/?$ inc/news/edit.php?id=$1 [NC,L]
+RewriteRule ^news/delete/([0-9]+)/?$ inc/news/delete.php?id=$1 [NC,L]
+RewriteRule ^news/show/([0-9]+)/?$ inc/news/show.php?id=$1 [NC,L]
+RewriteRule ^news/create/?$ inc/news/add.php [NC,L]
+RewriteRule ^news/list/up/([0-9]+)/([0-9]+)/?$ inc/news/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^news/list/down/([0-9]+)/([0-9]+)/?$ inc/news/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^news/list/([0-9]+)/?$ inc/news/list.php?pagination=$1 [NC,L]
+
+#product
+RewriteRule ^product/list/?$ inc/product/list.php [NC,L]
+RewriteRule ^product/edit/([0-9]+)/?$ inc/product/edit.php?id=$1 [NC,L]
+RewriteRule ^product/delete/([0-9]+)/?$ inc/product/delete.php?id=$1 [NC,L]
+RewriteRule ^product/show/([0-9]+)/?$ inc/product/show.php?id=$1 [NC,L]
+RewriteRule ^product/create/?$ inc/product/add.php [NC,L]
+RewriteRule ^product/list/up/([0-9]+)/([0-9]+)/?$ inc/product/list.php?directionrow=yuxari&id=$1&sira=$2 [NC,L]
+RewriteRule ^product/list/down/([0-9]+)/([0-9]+)/?$ inc/product/list.php?directionrow=asagi&id=$1&sira=$2 [NC,L]
+RewriteRule ^product/list/([0-9]+)/?$ inc/product/list.php?pagination=$1 [NC,L]
+
+#product-kredit
+RewriteRule ^product/([0-9]+)/kredit/list/?$ inc/product/kredit/list.php?product_id=$1 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/edit/([0-9]+)/?$ inc/product/kredit/edit.php?product_id=$1&kredit_id=$2 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/delete/([0-9]+)/?$ inc/product/kredit/delete.php?product_id=$1&kredit_id=$2 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/show/([0-9]+)/?$ inc/product/kredit/show.php?product_id=$1&kredit_id=$2 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/create/?$ inc/product/kredit/add.php?product_id=$1 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/list/up/([0-9]+)/([0-9]+)/?$ inc/product/kredit/list.php?product_id=$1&directionrow=yuxari&id=$2&sira=$3 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/list/down/([0-9]+)/([0-9]+)/?$ inc/product/kredit/list.php?product_id=$1&directionrow=asagi&id=$2&sira=$3 [NC,L]
+RewriteRule ^product/([0-9]+)/kredit/list/([0-9]+)/?$ inc/product/kredit/list.php?product_id=$1&pagination=$2 [NC,L]
+
+#product-gallery
+RewriteRule ^product/([0-9]+)/gallery/list/?$ inc/product/gallery/list.php?product_id=$1 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/edit/([0-9]+)/?$ inc/product/gallery/edit.php?product_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/delete/([0-9]+)/?$ inc/product/gallery/delete.php?product_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/show/([0-9]+)/?$ inc/product/gallery/show.php?product_id=$1&gallery_id=$2 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/create/?$ inc/product/gallery/add.php?product_id=$1 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/list/up/([0-9]+)/([0-9]+)/?$ inc/product/gallery/list.php?product_id=$1&directionrow=yuxari&id=$2&sira=$3 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/list/down/([0-9]+)/([0-9]+)/?$ inc/product/gallery/list.php?product_id=$1&directionrow=asagi&id=$2&sira=$3 [NC,L]
+RewriteRule ^product/([0-9]+)/gallery/list/([0-9]+)/?$ inc/product/gallery/list.php?product_id=$1&pagination=$2 [NC,L]
+
+#subscribeme
+RewriteRule ^subscribeme/list/?$ inc/subscribeme/list.php [NC,L]
+RewriteRule ^subscribeme/delete/([0-9]+)/?$ inc/subscribeme/delete.php?id=$1 [NC,L]
+RewriteRule ^subscribeme/list/([0-9]+)/?$ inc/subscribeme/list.php?pagination=$1 [NC,L]
+
+#login
+RewriteRule ^login/?$ login.php [NC,L]
+RewriteRule ^logout/?$ logout.php [QSA,L]
+RewriteRule ^checklogin checklogin.php [NC,L]
+
+#information
+RewriteRule ^info/?$ information.php [NC,L]
+RewriteRule ^info/edit/?$ information.php?action=edit [NC,L]
+RewriteRule ^info/(\w\-\/]+)/?$ information.php [NC,L]

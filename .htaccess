@@ -1,0 +1,96 @@
+#Set Directory
+
+DirectoryIndex index.php
+
+
+
+#Prevent access to system files
+
+## Enable Mod Rewrite, this is only required once in each .htaccess file
+
+Options +FollowSymlinks
+
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+
+#Statik sehifeler
+
+RewriteRule ^/?$ index.php?linkname=ana-sehife [NC,L]
+
+RewriteRule ^index.php?$ index.php?linkname=ana-sehife [NC,L]
+
+RewriteRule ^ana-sehife/?$ index.php?linkname=ana-sehife [NC,L]
+
+RewriteRule ^elaqe/?$ pages/contact.php?linkname=elaqe [NC,L]
+
+
+
+RewriteRule ^mehsul/([0-9]+)/([\w\-]+).html?$ pages/product_enter.php?id=$1&name=$2&linkname=mehsul [NC,L]
+RewriteRule ^mehsul/([0-9]+)/([\w\-]+)/sifaris-et/?$ pages/product_buy.php?id=$1&name=$2&linkname=buy [NC,L]
+
+RewriteRule ^xeberler/?$ pages/news.php?$linkname=xeberler [NC,L]
+RewriteRule ^xeber/([0-9]+)/([\w\-]+).html?$ pages/news_enter.php?id=$1&linkname=$2 [NC,L]
+RewriteRule ^xeber/([0-9]+)/?$ pages/news.php?pagination=$1 [NC,L]
+
+RewriteRule ^kateqoriya/([\w\-]+)/?$ pages/category.php?linkname=$1 [NC,L]
+RewriteRule ^kateqoriya/([\w\-]+)/([0-9]+)/?$ pages/category.php?linkname=$1&pagination=$2 [NC,L]
+
+RewriteRule ^([\w\-]+)/?$ pages/static_pages.php?linkname=$1 [NC,L]
+
+
+
+#error
+
+ErrorDocument 400 /error/400.php
+
+ErrorDocument 401 /error/401.php
+
+ErrorDocument 403 /error/403.php
+
+ErrorDocument 404 /error/404.php
+
+ErrorDocument 500 /error/500.php
+
+
+
+<FilesMatch "\.(flv|gif|jpg|jpeg|png|ico|swf)$">
+
+    Header set Cache-Control "max-age=2629000"
+
+</FilesMatch>
+
+
+
+<FilesMatch "\.(js|css)$">
+
+    Header set Cache-Control "max-age=2629000"
+
+</FilesMatch>
+
+
+
+<FilesMatch "\.(html|htm)$">
+
+    Header set Cache-Control "max-age=2629000"
+
+</FilesMatch>
+
+
+
+
+
+#RewriteRule ^news/([0-9]+)/([\w\-]+)/?$ index.php?page=news&id=$1&linkname=$2 [NC,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+#<IfModule mime_module>
+#  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+#</IfModule>
+# php -- END cPanel-generated handler, do not edit
