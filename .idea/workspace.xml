@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/func.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/func.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/html_start.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/html_start.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -258,7 +256,9 @@
       <workItem from="1566027904605" duration="11000" />
       <workItem from="1566030654896" duration="2519000" />
       <workItem from="1566033965649" duration="913000" />
-      <workItem from="1566039595761" duration="9886000" />
+      <workItem from="1566039595761" duration="10562000" />
+      <workItem from="1566054910268" duration="972000" />
+      <workItem from="1566066411879" duration="3503000" />
     </task>
     <servers />
   </component>

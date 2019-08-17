@@ -209,7 +209,10 @@
 		color: #afdefa;
 		font-size: 1.9em;
 	}
-
+	.cbp-spmenu .mobile-container .el span
+	{
+		margin-left: 10px;
+	}
 	.cbp-spmenu .menu-header button {
 		color: #afdefa;
 		position: absolute;
@@ -318,7 +321,9 @@
 	.cbp-spmenu-push-toleft {
 		left: -240px;
 	}
-
+	ul.megamenu-3 li {
+		 padding:  0px !important;
+	}
 	/* Transitions */
 	.cbp-spmenu,
 	.cbp-spmenu-push {

@@ -1038,8 +1038,32 @@ function multilevelCat($table,$parentId,$catId,$count)
 
         if ($parentId==0) {
 
+            if ($parentcategoryfetch['id']=='9') {
+                $menu.= '<div class="fa-px text-center"><img width="15" src="../img/menuicons/mobile.png"></div>';
+            }elseif($parentcategoryfetch['id']=='31'){
+                $menu.= '<div class="fa-px text-center"><img width="15" src="../img/menuicons/ipad.png"></div>';
+            }
+            elseif($parentcategoryfetch['id']=='10'){
+                $menu.= '<div class="fa-px text-center"><img src="../img/menuicons/laptop.png"></div>';
+            }
+            elseif($parentcategoryfetch['id']=='13'){
+                $menu.= '<div class="fa-px text-center"><img src="../img/menuicons/tv.png"></div>';
+            }
+            elseif($parentcategoryfetch['id']=='12'){
+                $menu.= '<div class="fa-px text-center"><img src="../img/menuicons/photocamera.png"></div>';
+            }
+            elseif($parentcategoryfetch['id']=='14'){
+                $menu.= '<div class="fa-px text-center"><img src="../img/menuicons/washer.png"></div>';
+            }
+            elseif($parentcategoryfetch['id']=='15'){
+                $menu.= '<div class="fa-px text-center"><img src="../img/menuicons/fan.png"></div>';
+            }
+            elseif($parentcategoryfetch['id']=='115'){
+                $menu.= '<div class="fa-px text-center"><img src="../img/menuicons/camera.png"></div>';
+            }
+            else{
                 $menu.= '<div class="fa-px text-center"><i class="'.$parentcategoryfetch['icon'].'"></i></div>';
-
+            }
         }
 
         if ($count>1){$right='<i class="fas fa-angle-right pull-right"></i>';}else{$right='';}

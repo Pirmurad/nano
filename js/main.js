@@ -428,29 +428,26 @@ $('#mailsend').on('submit',function(e) {  //Don't foget to change the id form
 	// });
 
 
-	$(".mobile-container ul li a").hover(
+	$(".mobile-container ul li a").on("click",
 		function () {
 			var catid = $(this).data('id');
 			$.ajax({
 				url: "ajax/category.php",
 				method: "post",
-				data: { id: catid },
+				data: {id: catid},
 				dataType: "json",
-				success: function( data ) {
+				success: function (data) {
 					$(".child-menu>.megamenu-2").html(data);
 				}
 			});
 			$(".child-menu").addClass('animated fadeInRight delay-4s');
-			$(".el span").css({"visibility":"hidden"});
-		},
-		function () {
-			// $(".child-menu").removeClass('active');
-		}
-	);
-    $( ".header-bottom" ).mouseleave(function() {
-		$(".child-menu").removeClass('fadeInRight');
-		$(".child-menu").addClass('fadeOutRight');
-		$(".el span").css({"visibility":"visible"});
+			$(".el span").css({"visibility": "hidden"});
+
+		});
+    $( ".mobile-container ul li a" ).dblclick(function() {
+		$(".header-bottom .mobail-menu-area .menu-header .child-menu").removeClass('fadeInRight');
+		$(".header-bottom .mobail-menu-area .menu-header .child-menu").addClass('fadeOutRight');
+		$(".header-bottom .mobail-menu-area .el span").css({"visibility":"visible"});
 
 
 	});
