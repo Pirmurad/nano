@@ -355,9 +355,9 @@
     </div>
     <div class="footer-bottom ptb-20">
         <div class="container">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="copyright">
-                    <span>Copyright &copy; 2018 <a href="http://mrsadiq.info/" target="_blank" title="MrSadiq.info Portfolio Site"><img src="img/mrsadiq.info.png" alt="MrSadiq.info Portfolio Site" style="width: 30px;margin-top: -5px;margin-left: 5px;margin-right: 5px;"></a> Bütün hüquqlar qorunur</span>
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
+                <div class="copyright text-center">
+                    <span>Copyright &copy; 2018 <a href="http://mrsadiq.info/" target="_blank" title="MrSadiq.info Portfolio Site"><img src="img/mrsadiq.info.png" alt="MrSadiq.info Portfolio Site" style="width: 30px;margin-top: -5px;margin-left: 5px;margin-right: 5px;"></a> <br class="brk">Bütün hüquqlar qorunur</span>
                 </div>
             </div>
         </div>

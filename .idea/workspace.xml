@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c1bb5a8-355d-49ba-8b62-61101cdf84de" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/cms/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/matchedit-data.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/matchedit-data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cms/pages/html_start.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/pages/html_start.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -255,6 +252,10 @@
       <workItem from="1565894444702" duration="1941000" />
       <workItem from="1565930883465" duration="8322000" />
       <workItem from="1565981340319" duration="1021000" />
+      <workItem from="1566026808566" duration="776000" />
+      <workItem from="1566027904605" duration="11000" />
+      <workItem from="1566030654896" duration="2519000" />
+      <workItem from="1566033965649" duration="913000" />
     </task>
     <servers />
   </component>

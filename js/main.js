@@ -784,8 +784,6 @@ $( document ).ready(function() {
 
 //Left menu start
 
-
-
 	var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 		showLeft = document.getElementById( 'showLeft' ),
 		showLeftClose = document.querySelector( '.close' ),

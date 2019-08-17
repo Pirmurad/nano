@@ -1,5 +1,10 @@
 /* General styles for all menus */
+.brk{display: none !important;}
 @media screen and (max-width: 992px) {
+	.brk
+	{
+		display: block !important;
+	}
 .header-top-area .vr
 {
 	border-right: 1px solid #1b71b6;
@@ -64,7 +69,7 @@
 		animation-iteration-count: 1;
 	}
 
-	input {
+	.input {
 		box-sizing: border-box;
 		width: 30px;
 		height: 30px;
@@ -183,17 +188,25 @@
 
 }
 
-	.cbp-spmenu {
-		background: #47a3da;
+	.cbp-spmenu  {
 		position: fixed;
 		overflow-y: scroll;
+
 	}
+.cbp-spmenu ul li:nth-child(odd)
+{
+	background-color:#2d2e82;
+}
+.cbp-spmenu ul li:nth-child(even)
+{
+	background-color:#27348b;
+}
 
 	.cbp-spmenu .menu-header {
 
 		margin: 0;
 		font-weight: 300;
-		background: #0d77b6;
+
 	}
 
 	.cbp-spmenu h3 {
@@ -227,7 +240,7 @@
 
 	/* Orientation-dependent styles for the content of the menu */
 	.cbp-spmenu-vertical {
-		width: 240px;
+		width: 85%;
 		height: 100%;
 		top: 0;
 		z-index: 1000;
@@ -261,7 +274,7 @@
 
 	/* Vertical menu that slides from the left or right */
 	.cbp-spmenu-left {
-		left: -240px;
+		left: -85%;
 	}
 
 	.cbp-spmenu-right {
