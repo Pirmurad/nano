@@ -440,12 +440,18 @@ $('#mailsend').on('submit',function(e) {  //Don't foget to change the id form
 					$(".child-menu>.megamenu-2").html(data);
 				}
 			});
-			$(".child-menu").addClass('animated fadeInRight delay-4s');
+			if($(".child-menu").hasClass('fadeOutRight'))
+			{
+				$(".child-menu").removeClass('fadeOutRight');
+
+			}
+			$(".child-menu").addClass('active animated fadeInRight delay-4s');
 			$(".el span").css({"visibility": "hidden"});
 
 		});
     $( ".mobile-container ul li a" ).dblclick(function() {
-		$(".header-bottom .mobail-menu-area .menu-header .child-menu").removeClass('animated fadeInRight delay-4s');
+		$(".header-bottom .mobail-menu-area .menu-header .child-menu").removeClass('active  fadeInRight');
+		$(".header-bottom .mobail-menu-area .menu-header .child-menu").addClass('fadeOutRight');
 		$(".header-bottom .mobail-menu-area .el span").css({"visibility":"visible"});
 
 
