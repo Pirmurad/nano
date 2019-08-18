@@ -423,9 +423,9 @@ $('#mailsend').on('submit',function(e) {  //Don't foget to change the id form
             $(".header-bottom").removeClass('active');
         }
     );
-	// $( ".header-bottom" ).mouseleave(function() {
-	// 	$(".child-menu").removeClass('active');
-	// });
+	$( ".header-bottom" ).mouseleave(function() {
+		$(".child-menu").removeClass('active');
+	});
 
 
 	$(".mobile-container ul li a").on("click",
@@ -445,8 +445,7 @@ $('#mailsend').on('submit',function(e) {  //Don't foget to change the id form
 
 		});
     $( ".mobile-container ul li a" ).dblclick(function() {
-		$(".header-bottom .mobail-menu-area .menu-header .child-menu").removeClass('fadeInRight');
-		$(".header-bottom .mobail-menu-area .menu-header .child-menu").addClass('fadeOutRight');
+		$(".header-bottom .mobail-menu-area .menu-header .child-menu").removeClass('animated fadeInRight delay-4s');
 		$(".header-bottom .mobail-menu-area .el span").css({"visibility":"visible"});
 
 
