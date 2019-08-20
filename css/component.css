@@ -162,7 +162,35 @@
 		-ms-transform: rotate(-45deg);
 		transform: rotate(-45deg);
 	}
-
+.close-altmenu:before
+{
+	content: "";
+	position: absolute;
+	width: 27px;
+	height: 4px;
+	margin-top: -1px;
+	margin-left: -13px;
+	background-color: #000;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+	.close-altmenu:after
+	{
+		content: "";
+		position: absolute;
+		width: 27px;
+		height: 4px;
+		background-color: #000;
+		margin-top: -1px;
+		margin-left: -13px;
+		cursor: pointer;
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
 	.square {
 		box-sizing: border-box;
 		padding: 0 40px 0 10px;
@@ -185,9 +213,15 @@
 		-ms-transform: translate(-100%, -50%);
 		transform: translate(-100%, -50%);
 	}
+	.cbp-spmenu
+	{
+		background-color: #2d2e82;
+	}
+	.cbp-spmenu ul.bg-menu li
+{
+	border-bottom: 1px solid #258ecd;
 
-
-
+}
 
 	.cbp-spmenu ul.bg-menu li:nth-child(odd)
 	{
@@ -204,7 +238,26 @@
 		font-weight: 300;
 
 	}
+	.cbp-spmenu .menu-header .bg-menu li:first-child
+	{
+		background-color: #2d2e82 !important;
 
+	}
+	.cbp-spmenu .menu-header .bg-menu li:first-child:hover
+	{
+		background-color: #258ecd !important;
+
+	}
+	.cbp-spmenu .menu-header .bg-menu li:first-child > a
+	{
+		width: 85%;
+	}
+
+	.cbp-spmenu .megamenu-2 .megamenu-3  li:first-child:hover
+	{
+		background-color: #258ecd !important;
+
+	}
 	.cbp-spmenu h3 {
 		color: #afdefa;
 		font-size: 1.9em;
@@ -238,14 +291,13 @@
 
 	/* Orientation-dependent styles for the content of the menu */
 	.cbp-spmenu-vertical {
-		width: 85%;
+		width: 100%;
 		height: 100%;
 		top: 0;
 		z-index: 1000;
 	}
 
 	.cbp-spmenu-vertical a {
-		border-bottom: 1px solid #258ecd;
 		padding: 1em;
 	}
 
@@ -272,7 +324,7 @@
 
 	/* Vertical menu that slides from the left or right */
 	.cbp-spmenu-left {
-		left: -85%;
+		left: -100%;
 	}
 
 	.cbp-spmenu-right {
@@ -339,9 +391,10 @@
 		opacity: 0;
 	}
 	.child-menu ul.megamenu-2 {
-		height: auto;
+		height: 425px;
+		overflow-x: hidden;
 		width: 85% !important;
-		position: absolute;
+		position: fixed;
 		z-index: 9999999999;
 	}
 	.child-menu ul.megamenu-2>li {
@@ -355,10 +408,10 @@
 	.child-menu ul.megamenu-2
 	{
 		background: #fff;
-		margin-left: 47px;
+		right: 0;
 	}
 	.cbp-spmenu-vertical ul.megamenu-2 a {
-
+		border-bottom: 1px solid #258ecd;
 		padding: 1em;
 		color: #000;
 	}

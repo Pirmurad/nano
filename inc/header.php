@@ -99,7 +99,7 @@
                 <div class="autocomplete autocomplete-search autocomplete-small autocomplete-hide">
                     <div class="search-results" id="search-results"></div>
                 </div>
-                <a href="/pages/contact.php" class="location">
+                <a href="/elaqe" class="location">
                     <img src="../img/location.png" alt="">
                 </a>
             </div>
