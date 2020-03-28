@@ -138,7 +138,7 @@ $(document).ready(function () {
     });
 
 
-        $('#tip_product').on('click','button.refresh',function () {
+        $('#tip_product').on('click','.refresh',function () {
             var yenile_id = $(this).val();
             var matchvalue = $('#type_id').val(); // this.value
 
@@ -155,6 +155,56 @@ $(document).ready(function () {
 
             })
         });
+
+    $('#tip_product').on('click','.addNewValue',function (e) {
+            e.preventDefault();
+            var id = $(this).data("id");
+
+        $.ajax({
+            url: 'ajaxGetValue.php',
+            data: {
+                id: id
+            },
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+
+                $('#newParamVAlue .modal-content').html(data.modal);
+                $('#newParamVAlue').modal('show');
+            }
+
+        });
+
+
+        });
+
+    $(document).on('click','.saveNewValue',function (e) {
+        e.preventDefault();
+        var id =$('#id').val(),
+            name = $('#valueName').val();
+
+        $.ajax({
+            url: 'addNewValue.php',
+            data:{
+                id :id,
+                name: name
+            },
+            type: 'post',
+            dataType: 'json',
+            success: function (data) {
+                var select_id = '.tipler #' + data.param.linkname,
+                    newValue=data.new_value.name;
+                $(select_id).prepend($('<option>', {
+                    value: newValue,
+                    text : newValue
+                }));
+                $('#newParamVAlue').modal('hide');
+
+            }
+
+        });
+
+    })
 
 
 });

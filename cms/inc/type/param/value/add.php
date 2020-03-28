@@ -9,7 +9,6 @@ include_once "../../../../pages/html_start.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $errors= [];
     postextract(extract($_POST));
-
     if (empty($linkname)){$linkname=$name;}
     $linkname = dolinkname($linkname,$unwanted_array);
 

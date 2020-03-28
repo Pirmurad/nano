@@ -90,7 +90,7 @@
 
             <div class="nav navbar navbar-default navbar-primary">
                 <button id="showLeft">
-                    <img src="../img/menu.png" alt="">
+                    <img class="icone_size" src="../img/menu.png" alt="">
                 </button>
                 <form id="content" action="pages/search.php" method="get">
                     <input type="text" name="search" class="input" id="search-input">
@@ -100,7 +100,7 @@
                     <div class="search-results" id="search-results"></div>
                 </div>
                 <a href="/elaqe" class="location">
-                    <img src="../img/location.png" alt="">
+                    <img class="icone_size" src="../img/location.png" alt="">
                 </a>
             </div>
 

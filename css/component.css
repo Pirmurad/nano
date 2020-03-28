@@ -11,7 +11,7 @@
 }
 .search-img {
 		font-size: 16px;
-		top: -10px;
+		top: -10px;.child-menu ul.megamenu-2
 		vertical-align: middle;
 		line-height: 0;
 	}
@@ -46,8 +46,8 @@
 	.location
 	{
 		position: absolute;
-		left: 50%;
-		top: 10px;
+		left: 47%;
+		top: 8px;
 	}
 	#content {
 		position: absolute;
@@ -71,20 +71,18 @@
 
 	.input {
 		box-sizing: border-box;
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		background-color: #1b71b6;
 		border: 4px solid #ffffff;
 		border-radius: 50%;
 		background: none;
 		color: #fff;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 400;
 		outline: 0;
-		-webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
-		padding 0.2s;
-		transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
-		padding 0.2s;
+		-webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
+		transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out, padding 0.2s;
 		-webkit-transition-delay: 0.4s;
 		transition-delay: 0.4s;
 		-webkit-transform: translate(-100%, -50%);
@@ -92,13 +90,14 @@
 		transform: translate(-100%, -50%);
 	}
 
+
 	.search {
 		background: none;
 		position: absolute;
-		top: 0;
-		left: 0;
-		height: 50px;
-		width: 50px;
+		top: -3px;
+		left: -8px;
+		height: 30px;
+		width: 30px;
 		padding: 0;
 		border-radius: 100%;
 		outline: 0;
@@ -358,6 +357,11 @@
 		bottom: 0px;
 	}
 
+	.icone_size
+	{
+		width: 20px;
+		height: auto;
+	}
 	/* Push classes applied to the body */
 	.cbp-spmenu-push {
 		overflow: hidden;
@@ -393,10 +397,13 @@
 	.child-menu ul.megamenu-2 {
 		height: 425px;
 		overflow-x: hidden;
-		width: 85% !important;
+		width: 0%;
 		position: fixed;
-		z-index: 9999999999;
+		z-index: 999;
+		right: 0;
+		background: #fff;
 	}
+
 	.child-menu ul.megamenu-2>li {
 		width: 100% !important;
 		float: right !important;
@@ -405,11 +412,7 @@
 	{
 		box-shadow:none;
 	}
-	.child-menu ul.megamenu-2
-	{
-		background: #fff;
-		right: 0;
-	}
+
 	.cbp-spmenu-vertical ul.megamenu-2 a {
 		border-bottom: 1px solid #258ecd;
 		padding: 1em;
@@ -426,6 +429,22 @@
 		position: fixed;
 		overflow-y: scroll;
 
+	}
+	.seraching_item
+	{
+		position: relative;
+	}
+	.seraching_item > a >span
+	{
+		position: relative;
+		top: 5px;
+	}
+
+	.price_m
+	{
+	position: absolute;
+	bottom: 5px;
+	color: red;
 	}
 
 

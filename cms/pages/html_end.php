@@ -27,7 +27,10 @@
 
     <!--JQuery UI-->
     <script src="dist/js/jquery-ui.js"></script>
-    
+
+    <!--Boostrap select -->
+    <script src="dist/js/bootstrap-select.min.js"></script>
+
     <script src="dist/js/main.js"></script>
 
 

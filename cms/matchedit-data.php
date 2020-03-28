@@ -34,17 +34,12 @@ if (!empty($_POST)):
                     $form .= '<option value="' . $val['name'] . '">' . $val['name'] . '</option>';
                 endforeach;
                 $form .= '</select>
-
-            <!-- 
-               <button type="submit" id="refresh" style="position: absolute;top: 50%;right: -13px;background-color: transparent;border: none;">  <span><i class="fa fa-refresh"></i></span></button>
-                <input type="text" id="yenile_id" value="' . $par['id'] . '" name="' . $par['id'] . '">
-            -->
               <button 
                    type="button" 
-                   class="refresh"  
-                   value="' . $par['id'] . '" 
+                   class="addNewValue"  
+                   data-id="' . $par['id'] . '" 
                    style="position: absolute;top: 50%;right: -13px;background-color: transparent;border: none;"> 
-                   <span><i class="fa fa-refresh"></i></span>
+                   <span><i class="fa fa-plus"></i></span>
                    </button>
                 </div>';
                 if ($key == 2): $form .= '</div>'; endif;

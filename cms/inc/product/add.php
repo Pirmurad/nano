@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	        <div class="col-md-12 p10">
 		        <div class="col-lg-4">
 			        <label for="type_id"><span>Hansı tipə aid oldugunu seç</span></label><br>
-			        <select id="type_id" name="type_id" class="form-control">
+			        <select  id="type_id" name="type_id"  class="form-control selectpicker" data-live-search="true">
                         <option value="0">--Tip seçin--</option>
                         <?PHP
                         foreach ($typefetch as $type) {
@@ -187,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		        </div>
 		        <div class="col-lg-4">
 			        <label for="category_id"><span>Hansı kateqoriyaya aid oldugunu seç</span></label><br>
-			        <select id="category_id" name="category_id" class="form-control">
+			        <select id="category_id" name="category_id" class="form-control selectpicker" data-live-search="true">
                         <?PHP
                         echo multilevelMenu("category",0,"",0,0,0);
                         ?>
@@ -195,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		        </div>
                 <div class="col-lg-4">
                     <label for="brand_id"><span>Hansı brendə aid oldugunu seç</span></label><br>
-                    <select id="brand_id" name="brand_id" class="form-control">
+                    <select id="brand_id" name="brand_id" class="form-control selectpicker" data-live-search="true">
                         <? while($brand = fetch($brands)):?>
                             <option value="<?= $brand['id'] ?>"><?= $brand['name'] ?></option>
                         <? endwhile; ?>
@@ -205,7 +205,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-md-12 p10">
                 <div class="col-lg-4">
                     <label for="kredit_id"><span>Kredit kampaniyasını seç</span></label><br>
-                    <select id="kredit_id" name="kredit_id" class="form-control">
+                    <select id="kredit_id" name="kredit_id" class="form-control selectpicker" data-live-search="true">
                         <option value="0">--Kredit kampaniyası seçin--</option>
                         <? while($kredit = fetch($kreditfetch)):?>
                             <option value="<?= $kredit['id'] ?>"><?= $kredit['name'] ?></option>
@@ -238,12 +238,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
 </div>
+
+
 <?PHP } ?>
 
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+            <div class="modal fade" id="newParamVAlue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /#page-wrapper -->
 

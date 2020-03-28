@@ -35,6 +35,8 @@
 
     <!-- Main CSS -->
 	<link href="dist/css/main.css" rel="stylesheet">
+    <!-- Boostrap select  CSS -->
+    <link href="dist/css/bootstrap-select.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

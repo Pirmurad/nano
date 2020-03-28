@@ -1034,7 +1034,7 @@ function multilevelCat($table,$parentId,$catId,$count)
 
         if ($catId==$parentcategoryfetch['linkname']){$active=' class="active"';}else{$active="";}
 
-        $menu.= '<li '.$active.'><a href="#" data-id="'.$parentcategoryfetch['id'].'">';
+        $menu.= '<li '.$active.'><a href="javascript:void(0)" data-id="'.$parentcategoryfetch['id'].'">';
 
         if ($parentId==0) {
 

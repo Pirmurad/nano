@@ -1,6 +1,6 @@
 <? $slider = prepare("`id`,`image`,`image_name`,`url`","`slider`","`status`=?",["1"])->fetchAll(PDO::FETCH_ASSOC);
 if (!empty($slider)):?>
-<div class="sloder-area">
+<div class="slider-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

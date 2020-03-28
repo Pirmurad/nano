@@ -9,7 +9,7 @@ $product1 = get('product1');
 $product2 = get('product2');
 $product3 = get('product3');
 $form = get('form');
-
+ 
 if (empty($product1)){
     if (empty($product2)){
         if (empty($product3)){
