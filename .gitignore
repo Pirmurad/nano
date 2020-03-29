@@ -1,0 +1,7 @@
+.idea
+.well-known
+cgi-bin/*
+uploads/*
+test/*
+.htaccess
+config/*
