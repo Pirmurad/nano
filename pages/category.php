@@ -10,11 +10,46 @@ $brand_type = prepare("`brand_id`","`brand_type`","`type_id`=?",[$category['type
 
 $cat = prepare("`id`","`category`","`parent_id`=? AND `status`=?",[$category['id'],"1"])->fetch(PDO::FETCH_ASSOC);
 
+
+$prepare =	"";
+$execute =	[];
+
+if(!empty($_GET['min_price']) || !empty($_GET['max_price'])) {
+
+    $prepare .="`price` BETWEEN ? AND ?  AND";
+    array_push($execute, $_GET['min_price'], $_GET['max_price']);
+}
+
+if(!empty($_GET['brand_id'])) {
+
+    $brandId=implode(',',$_GET['brand_id']);
+
+    $prepare .="`brand_id` IN (".$brandId.")  AND";
+}
+
+if (!empty($_GET['orderby'])){
+    $order = explode("-",$_GET['orderby']);
+    $o = $order['0'];
+    $orderType = $order['1'];
+
+    if ($o=='view'){ $orderingBy = "view_count";}
+    if ($o=='date'){ $orderingBy = "data_create";}
+    if ($o=='price'){ $orderingBy = "price";}
+}
+
+if (empty($orderingBy) && empty($orderType)){
+    $orderingBy='ordering';
+    $orderType='DESC';
+}
+
+$prepare .=" `category_id`=? AND `status`=? GROUP BY id ";
+array_push($execute, $category['id'],"1");
+
 $perpage=12;
 if (get("pagination")) { $page_number  = intval(get("pagination")); } else { $page_number=1; };
 $start_from = ($page_number>1)?($page_number * $perpage)-$perpage:0;
 
-$products = prepare("MAX(price) AS idd,`id`,`linkname`,`name`,`image`,`price`,`description`,`note`","`product`","`category_id`=? AND `status`=? GROUP BY id",[$category['id'],"1"],"`ordering`","DESC","LIMIT $start_from,$perpage")->fetchAll(PDO::FETCH_ASSOC);
+$products = prepare("`id`,`linkname`,`name`,`image`,`price`,`description`,`note`","`product`",$prepare,$execute,$orderingBy,$orderType,"LIMIT $start_from,$perpage")->fetchAll(PDO::FETCH_ASSOC);
 
 $product_count = prepare("COUNT(id)","`product`","`category_id`=? AND `status`=?",[$category['id'],"1"])->fetch(PDO::FETCH_ASSOC);
 
@@ -42,6 +77,8 @@ $link='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 include_once("{$path}inc/html_start.php");
 include_once("{$path}inc/top_menu.php");
 include_once("{$path}inc/header.php");
+
+
 ?>
 <div class="main-container shop-bg">
     <div class="container">
@@ -59,81 +96,66 @@ include_once("{$path}inc/header.php");
         </div>
         <div class="row">
             <div id="filters" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <? if($total_records != 0): ?>
-                    <!-- filter-by-price-area start -->
-                    <div class="filter-by-price-area bg-fff box-shadow br20">
-                        <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">
-                            <div class="icon bg-1 br1 fl"><i class="fas fa-filter"></i></div>
-                            <h3>Qiymətə görə filter</h3>
+                <form action="" method="GET">
+                    <button type="submit" class="btn btn-block btn-primary mb-10">
+                        Filter et
+                    </button>
+                    <? if($total_records != 0): ?>
+                        <!-- filter-by-price-area start -->
+                        <div class="filter-by-price-area bg-fff box-shadow br20">
+                            <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">
+                                <div class="icon bg-1 br1 fl"><i class="fas fa-filter"></i></div>
+                                <h3>Qiymətə görə filter</h3>
+                            </div>
+                            <div class="filter-by-price p-20-15">
+                                <p>
+                                    Qiymət: <input type="text" id="amount" name="amount" disabled>
+                                </p>
+                                <input type="hidden" name="category_id" value="<?= $category['id'] ?>">
+                                <input type="hidden" name="type_id" value="<?= $category['type_id'] ?>">
+                                <input type="hidden" name="min_price" id="min_price" value="<?= isset($_GET['min_price']) ? $_GET['min_price'] : 0 ?>">
+                                <input type="hidden" name="max_price" id="max_price" value="<?= isset($_GET['max_price']) ? $_GET['max_price'] : $maxprice ?>">
+                                <div id="slider-range"></div>
+                            </div>
                         </div>
-                        <div class="filter-by-price p-20-15">
-                            <p>
-                                Qiymət: <input type="text" id="amount" name="amount" disabled>
-                            </p>
-                            <input type="hidden" name="category_id" value="<?= $category['id'] ?>">
-                            <input type="hidden" name="brand_id" id="brand_id" value="">
-                            <input type="hidden" name="type_id" value="<?= $category['type_id'] ?>">
-                            <div id="slider-range"></div>
+                    <? endif; if (!empty($brand_type)): ?>
+                        <!-- categories-area start -->
+                        <div class="categories-area mtb-30 box-shadow bg-fff br20 <?= ($total_records == 0) ? 'mb-30' : ''; ?>">
+                            <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">
+                                <div class="icon bg-1 br1 fl"><i class="fas fa-bookmark"></i></div>
+                                <h3>Brendlər</h3>
+                            </div>
+                            <div class="shop-categories-menu brandfilter">
+                                <ul>
+                                    <? foreach ($brand_type as $b):
+                                        $brand = prepare("`id`,`name`","`brand`","`id`=?",[$b['brand_id']])->fetch(PDO::FETCH_ASSOC);?>
+                                        <li>
+                                            <label id="<?= $brand['id'] ?>" class="brand">
+                                                <input <?=!empty($_GET['brand_id']) ? in_array($brand['id'], get('brand_id')) ? 'checked' : '' :'' ?> type="checkbox" value="<?= $brand['id'] ?>" name="brand_id[]">
+                                                <span><?= $brand['name'] ?></span>
+                                            </label>
+                                        </li>
+                                    <? endforeach;  ?>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                <? endif; if (!empty($brand_type)): ?>
-                    <!-- categories-area start -->
-                    <div class="categories-area mtb-30 box-shadow bg-fff br20 <?= ($total_records == 0) ? 'mb-30' : ''; ?>">
-                        <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">
-                            <div class="icon bg-1 br1 fl"><i class="fas fa-bookmark"></i></div>
-                            <h3>Brendlər</h3>
-                        </div>
-                        <div class="shop-categories-menu brandfilter">
-                            <ul>
-                                <? foreach ($brand_type as $b):
-                                    $brand = prepare("`id`,`name`","`brand`","`id`=?",[$b['brand_id']])->fetch(PDO::FETCH_ASSOC);?>
-                                    <li>
-                                        <label data-id="<?= $brand['id'] ?>" class="brand">
-                                            <input type="checkbox" value="<?= $brand['id'] ?>" data-name="brands">
+                    <? endif; if (!empty($category['type_id']=='1')): ?>
 
-                                            <span><?= $brand['name'] ?></span>
-                                        </label>
-                                    </li>
-                                <? endforeach;  ?>
-                            </ul>
+                    <? endif; if (!empty($cat)): ?>
+                        <!-- categories-area start -->
+                        <div class="categories-area box-shadow mtb-30 bg-fff br20 <?= ($total_records == 0) ? 'mb-30' : ''; ?>">
+                            <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">
+                                <div class="icon bg-1 br1 fl"><i class="fas fa-bookmark"></i></div>
+                                <h3>Alt Kateqoriyalar</h3>
+                            </div>
+                            <div class="shop-categories-menu p-20">
+                                <ul>
+                                    <?= multilevelCat("`category`",$category['id'],get('linkname'),0); ?>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                <? endif; if (!empty($category['type_id']=='1')): ?>
-                    <!-- categories-area start -->
-<!--                    <div class="categories-area mtb-30 box-shadow bg-fff br20 --><?//= ($total_records == 0) ? 'mb-30' : ''; ?><!--">-->
-<!--                        <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">-->
-<!--                            <div class="icon bg-1 br1 fl"><i class="fas fa-bookmark"></i></div>-->
-<!--                            <h3>Ram</h3>-->
-<!--                        </div>-->
-<!--                        <div class="shop-categories-menu ramfilter p-20">-->
-<!--                            <ul>-->
-<!--                                --><?// $value = prepare("`name`,`id`","`value`","`param_id`=?",[27])->fetchAll(PDO::FETCH_ASSOC);
-//                                foreach ($value as $v): ?>
-<!--                                    <li>-->
-<!--                                        <label data-id="--><?//= $v['id'] ?><!--" class="ram">-->
-<!--                                            <input type="checkbox" value="--><?//= $v['name'] ?><!--" data-name="rams">-->
-<!---->
-<!--                                            <span>--><?//= $v['name'] ?><!--</span>-->
-<!--                                        </label>-->
-<!--                                    </li>-->
-<!--                                --><?// endforeach;  ?>
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                <? endif; if (!empty($cat)): ?>
-                    <!-- categories-area start -->
-                    <div class="categories-area box-shadow mtb-30 bg-fff br20 <?= ($total_records == 0) ? 'mb-30' : ''; ?>">
-                        <div class="category-title home2-bg-1 text-uppercase home2-category-title br12">
-                            <div class="icon bg-1 br1 fl"><i class="fas fa-bookmark"></i></div>
-                            <h3>Alt Kateqoriyalar</h3>
-                        </div>
-                        <div class="shop-categories-menu p-20">
-                            <ul>
-                                <?= multilevelCat("`category`",$category['id'],get('linkname'),0); ?>
-                            </ul>
-                        </div>
-                    </div>
-                <? endif; ?>
+                    <? endif; ?>
+
             </div>
             <!-- category-vew area start -->
             <div class="col-lg-9  col-md-9 col-sm-12 col-xs-12">
@@ -161,21 +183,24 @@ include_once("{$path}inc/header.php");
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <? if($total_records != 0){ ?>
+
+
                                 <div class="woocommerce-ordering text-center">
                                     <select name="orderby">
                                         <option selected="selected">Sırala</option>
-                                        <option id="view-desc">Çox baxılana görə</option>
-                                        <option id="view-asc">Az baxılana görə</option>
-                                        <option id="date-desc">Yenidən köhnəyə qədər</option>
-                                        <option id="date-asc">Köhnədən yeniyə qədər</option>
-                                        <option id="price-desc">Bahadan ucuza qədər</option>
-                                        <option id="price-asc">Ucuzdan bahaya qədər</option>
+                                        <option  <?=$_GET['orderby'] == 'view-desc' ? 'selected' : ''?> value="view-desc">Çox baxılana görə</option>
+                                        <option  <?=$_GET['orderby'] == 'view-asc' ? 'selected' : ''?> value="view-asc">Az baxılana görə</option>
+                                        <option  <?=$_GET['orderby'] == 'date-desc' ? 'selected' : ''?> value="date-desc">Yenidən köhnəyə qədər</option>
+                                        <option  <?=$_GET['orderby'] == 'date-asc' ? 'selected' : ''?> value="date-asc">Köhnədən yeniyə qədər</option>
+                                        <option  <?=$_GET['orderby'] == 'price-desc' ? 'selected' : ''?> value="price-desc">Bahadan ucuza qədər</option>
+                                        <option  <?=$_GET['orderby'] == 'price-asc' ? 'selected' : ''?> value="price-asc">Ucuzdan bahaya qədər</option>
                                     </select>
                                 </div>
                             </div>
                             <? }  ?>
                         </div>
                     </div>
+                    </form>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="tab1">
                             <div class="row">
@@ -267,11 +292,13 @@ include_once("{$path}inc/html_end.php");
     // pricing slider////
     $( "#slider-range" ).slider({
         range: true,
-        min: 0,
-        max: <?= $maxprice ?>,
-        values: [ 0, <?= $maxprice ?>],
+        min: <?= isset($_GET['min_price']) ? $_GET['min_price'] : 0 ?>,
+        max: <?= isset($_GET['max_price']) ? $_GET['max_price'] : $maxprice ?>,
+        values: [ <?= isset($_GET['min_price']) ? $_GET['min_price'] : 0 ?>, <?= isset($_GET['max_price']) ? $_GET['max_price'] : $maxprice ?>],
         slide: function( event, ui ) {
             $( "#amount" ).val( ui.values[ 0 ] + " AZN - " + ui.values[ 1 ] + " AZN");
+            $( "#min_price" ).val( ui.values[0]);
+            $( "#max_price" ).val( ui.values[1]);
         }
     });
     $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +

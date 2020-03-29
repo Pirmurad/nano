@@ -551,65 +551,65 @@
 	});
 
 
-	$('#slider-range').on("click",function(){
-		var amount = $('#amount').val();
-		var category_id = $('input[name=category_id]').val();
-		$.ajax({
-			url: "ajax/category_filter.php",
-			method: "get",
-			dataType: "json",
-			data: { amount: amount,category_id: category_id  },
-			success: function( data ) {
-				$('#tab1>.row').html(data.json1);
-				$('#tab2>.row').html(data.json2);
-			}
-		});
-	});
-
-
-	$(document.getElementById('filters')).change(function(){
-		var brand = $(this).data('id'),
-			amount = $('#amount').val(),
-			category_id = $('input[name=category_id]').val(),
-			type_id = $('input[name=type_id]').val(),
-			brand_id = $('#brand_id').val(brand);
-
-		var data = {
-				type_id: type_id,
-				amount: amount,
-				category_id: category_id
-			},
-			brandIds = [],
-			ramIds = [];
-
-		this.querySelectorAll('input:checked').forEach(function (input) {
-			switch (input.dataset['name']) {
-				case 'brands':
-					brandIds.push(input.value);
-					break;
-
-				case 'rams':
-					ramIds.push(input.value);
-					break;
-			}
-		});
-
-		data.brands = brandIds; // yoxla
-		data.rams = ramIds;
-
-		$.ajax({
-			url: "ajax/category_filter.php",
-			type: "get",
-			dataType: "json",
-			// processData: false,
-			data: data,
-			success: function( data ) {
-				$('.woocommerce-pagination-area ').hide();
-				$('#tab1>.row').html(data.json1);
-				$('#tab2>.row').html(data.json2);
-			}
-		});
-	});
+	// $('#slider-range').on("click",function(){
+	// 	var amount = $('#amount').val();
+	// 	var category_id = $('input[name=category_id]').val();
+	// 	$.ajax({
+	// 		url: "ajax/category_filter.php",
+	// 		method: "get",
+	// 		dataType: "json",
+	// 		data: { amount: amount,category_id: category_id  },
+	// 		success: function( data ) {
+	// 			$('#tab1>.row').html(data.json1);
+	// 			$('#tab2>.row').html(data.json2);
+	// 		}
+	// 	});
+	// });
+	//
+	//
+	// $(document.getElementById('filters')).change(function(){
+	// 	var brand = $(this).data('id'),
+	// 		amount = $('#amount').val(),
+	// 		category_id = $('input[name=category_id]').val(),
+	// 		type_id = $('input[name=type_id]').val(),
+	// 		brand_id = $('#brand_id').val(brand);
+	//
+	// 	var data = {
+	// 			type_id: type_id,
+	// 			amount: amount,
+	// 			category_id: category_id
+	// 		},
+	// 		brandIds = [],
+	// 		ramIds = [];
+	//
+	// 	this.querySelectorAll('input:checked').forEach(function (input) {
+	// 		switch (input.dataset['name']) {
+	// 			case 'brands':
+	// 				brandIds.push(input.value);
+	// 				break;
+	//
+	// 			case 'rams':
+	// 				ramIds.push(input.value);
+	// 				break;
+	// 		}
+	// 	});
+	//
+	// 	data.brands = brandIds; // yoxla
+	// 	data.rams = ramIds;
+	//
+	// 	$.ajax({
+	// 		url: "ajax/category_filter.php",
+	// 		type: "get",
+	// 		dataType: "json",
+	// 		// processData: false,
+	// 		data: data,
+	// 		success: function( data ) {
+	// 			$('.woocommerce-pagination-area ').hide();
+	// 			$('#tab1>.row').html(data.json1);
+	// 			$('#tab2>.row').html(data.json2);
+	// 		}
+	// 	});
+	// });
 
 	/*$('.ram').click(function(){
         var ram = $(this).data('id');
@@ -625,20 +625,20 @@
         });
     });*/
 
-	$('select[name=orderby]').change(function () {
-		var id = $(this).find(':selected')[0].id;
-		var category_id = $('input[name=category_id]').val();
-		$.ajax({
-			url: "ajax/category_filter.php",
-			method: "get",
-			dataType: "json",
-			data: { id: id,category_id: category_id },
-			success: function( data ) {
-				$('#tab1>.row').html(data.json1);
-				$('#tab2>.row').html(data.json2);
-			}
-		});
-	});
+	// $('select[name=orderby]').change(function () {
+	// 	var id = $(this).find(':selected')[0].id;
+	// 	var category_id = $('input[name=category_id]').val();
+	// 	$.ajax({
+	// 		url: "ajax/category_filter.php",
+	// 		method: "get",
+	// 		dataType: "json",
+	// 		data: { id: id,category_id: category_id },
+	// 		success: function( data ) {
+	// 			$('#tab1>.row').html(data.json1);
+	// 			$('#tab2>.row').html(data.json2);
+	// 		}
+	// 	});
+	// });
 
 	$('#hisse-hisse-ode').click(function () {
 		$("#product-buy").validate({
